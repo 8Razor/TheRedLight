@@ -1,0 +1,40 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+{% load static %}
+
+{% block bootstrap3_extra_head %}
+    <link href="https://fonts.googleapis.com/css?font-family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+
+
+{% block bootstrap3_content %}
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{% url 'index' %}" class="navbar-brand">R</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+        <h1 style="font-weight:bold">Blue</h1>
+        {% for p in persons %}
+            <p><strong>{{ p.first_name }}</strong>--{{ p.last_name }}</p>
+        {% endfor %}
+    {% endblock %}
+{% endblock %}

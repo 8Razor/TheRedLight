@@ -1,0 +1,28 @@
+#logo{
+}
+
+body {
+    background-color: beige;
+}
+
+#total-orders{
+    background-color: #4cb4c7;
+}
+
+#orders-delivered{
+    background-color: #7abecc;
+}
+
+#orders-pending{
+    background-color: cadetblue;
+}
+
+.navbar .navbar-inverse{
+    border-radius: 0;
+}
+
+.navbar .navbar-brand {
+    font-family: "Segoe MDL2 Assets", 'sans-serif';
+    font-size: 28px;
+    color: darkred;
+}
